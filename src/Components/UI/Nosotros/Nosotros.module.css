@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
 
-/* â”€â”€ VARIABLES â”€â”€ */
+
 :root {
   --cyan:   #00a8c6;
   --green:  #8dc63f;
@@ -12,7 +12,7 @@
   --muted:  #7a8c80;
 }
 
-/* â”€â”€ SECTION WRAPPER â”€â”€ */
+
 .section {
   font-family: 'DM Sans', sans-serif;
   background: #0a0f0d;
@@ -58,7 +58,7 @@
   z-index: 1;
 }
 
-/* â”€â”€ SHARED HEADER â”€â”€ */
+
 .eyebrow {
   font-size: 11px;
   font-weight: 500;
@@ -99,9 +99,7 @@
   max-width: 480px;
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   BLOQUE 1 â€” QUIÃ‰NES SOMOS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
 .whoBlock {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,7 +123,7 @@
   max-width: 420px;
 }
 
-/* 2Ã—2 quad grid */
+
 .quadGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -155,7 +153,7 @@
 .quadCard:nth-child(3) { background: var(--orange); }
 .quadCard:nth-child(4) { background: #e05a1a; } /* orange variant */
 
-/* override 4th to match slides */
+
 .quadCard:nth-child(4) { background: #e07820; }
 
 .quadIcon {
@@ -182,9 +180,7 @@
   line-height: 1.35;
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   BLOQUE 2 â€” EL DESAFÃO ENERGÃ‰TICO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
 .challengeBlock {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -193,7 +189,7 @@
   animation: fadeSlideUp 0.7s ease 0.1s both;
 }
 
-/* reverse: text right, list left */
+
 .challengeLeft {
   display: flex;
   flex-direction: column;
@@ -239,7 +235,7 @@
   font-weight: 500;
 }
 
-/* challenge item rows */
+
 .challengeItem {
   display: flex;
   align-items: center;
@@ -282,7 +278,7 @@
   line-height: 1.45;
 }
 
-/* divider between blocks */
+
 .divider {
   width: 100%;
   height: 1px;
@@ -290,13 +286,13 @@
   margin-bottom: 120px;
 }
 
-/* â”€â”€ ANIMATION â”€â”€ */
+
 @keyframes fadeSlideUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .whoBlock,
   .challengeBlock {

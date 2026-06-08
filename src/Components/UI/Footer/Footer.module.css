@@ -1,4 +1,4 @@
-/* â”€â”€ Footer principal â”€â”€ */
+
 .footer {
   background-color: #1e1b4b;
   color: #d1d5db;
@@ -14,7 +14,7 @@
   gap: 3rem;
 }
 
-/* â”€â”€ Marca â”€â”€ */
+
 .brand {
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
   margin: 0;
 }
 
-/* â”€â”€ Columnas â”€â”€ */
+
 .column {
   display: flex;
   flex-direction: column;
@@ -78,7 +78,7 @@
   color: #9ca3af;
 }
 
-/* â”€â”€ Barra inferior â”€â”€ */
+
 .bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.25rem 1.25rem;
@@ -96,7 +96,7 @@
   font-weight: 500;
 }
 
-/* â”€â”€ Responsive â”€â”€ */
+/* Responsive */
 @media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr 1fr;

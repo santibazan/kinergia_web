@@ -1,0 +1,522 @@
+/* â”€â”€ Fuentes â”€â”€ */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap');
+
+
+.section {
+  font-family: 'Barlow', sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+
+.hero {
+  position: relative;
+  background: #1a3a1a;
+  border-radius: 12px;
+  padding: 3.5rem 3rem;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 45%;
+  background: linear-gradient(135deg, #d97706 0%, #1a3a1a 65%);
+  opacity: 0.3;
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  pointer-events: none;
+}
+
+.heroTag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fbbf24;
+  margin: 0 0 1rem;
+  position: relative;
+}
+
+.heroTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  max-width: 580px;
+  position: relative;
+}
+
+.heroBody {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #b8d4b8;
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 0 0.6rem;
+  position: relative;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.75rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 0.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 0.82rem;
+  color: #c8e6c8;
+  position: relative;
+}
+
+.heroDot {
+  width: 7px;
+  height: 7px;
+  background: #fbbf24;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sectionLabel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin: 0 0 1rem;
+}
+
+.whoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 2.5rem;
+}
+
+.whoCard {
+  background: #ffffff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 8px;
+  border-top: 3px solid #16a34a;
+  padding: 1.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.whoIcon {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.whoText {
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.55;
+  margin: 0;
+  font-weight: 500;
+}
+
+.challengeBox {
+  background: #f0fdf4;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 0.5px solid #bbf7d0;
+}
+
+.challengeTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem;
+}
+
+.challengeIntro {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+  max-width: 680px;
+}
+
+.challengeBars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.challengeBar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #1a3a1a;
+  border-radius: 6px;
+  padding: 13px 18px;
+}
+
+.challengeBarDash {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fbbf24;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.challengeBarText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.enfoqueMotto {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #374151;
+  margin: -0.5rem 0 1.5rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  position: relative;
+}
+
+.stepNum {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.step:not(:last-child) .stepNum::after {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 28px;
+  background: #bbf7d0;
+}
+
+.stepArrow {
+  display: none;
+}
+
+.stepContent {
+  padding: 6px 0 28px;
+}
+
+.stepTitle {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.stepDesc {
+  font-size: 0.82rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin-bottom: 2.5rem;
+}
+
+.serviceCard {
+  background: #ffffff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 8px;
+  border-top: 3px solid #16a34a;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.12);
+}
+
+.serviceIcon {
+  color: #16a34a;
+}
+
+.serviceName {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.valueBox {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.valueTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem;
+}
+
+.valueIntro {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+  max-width: 680px;
+}
+
+.valueBars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.valueBar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #1a3a1a;
+  border-radius: 6px;
+  padding: 13px 18px;
+}
+
+.valueBarDash {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fbbf24;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.valueBarText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #ffffff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 2.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.profile:hover {
+  box-shadow: 0 2px 12px rgba(22, 163, 74, 0.1);
+}
+
+.profileAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1a3a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.profileName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.profileRole {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #16a34a;
+  margin: 0 0 4px;
+}
+
+.profileBio {
+  font-size: 0.78rem;
+  color: #6b7280;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.linkedinLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #16a34a;
+  text-decoration: none;
+  padding: 2px 8px;
+  border: 1px solid #16a34a;
+  border-radius: 100px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.linkedinLink:hover {
+  background-color: #1a3a1a;
+  color: #ffffff;
+  border-color: #1a3a1a;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #1a3a1a;
+  border-radius: 12px;
+  padding: 1.75rem 2.5rem;
+}
+
+.ctaText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ctaHeading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ctaContact {
+  font-size: 0.82rem;
+  color: #b8d4b8;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #16a34a;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 26px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .valueBox,
+  .challengeBox {
+    padding: 1.5rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .whoGrid,
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .whoGrid,
+  .services {
+    grid-template-columns: 1fr;
+  }
+}

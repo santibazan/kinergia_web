@@ -55,7 +55,7 @@
   align-items: start;
 }
 
-/* â”€â”€ LEFT SIDE â”€â”€ */
+
 .info {
   padding-top: 8px;
   animation: fadeSlideUp 0.7s ease both;
@@ -185,7 +185,7 @@
   height: 15px;
 }
 
-/* â”€â”€ RIGHT SIDE â€” FORM â”€â”€ */
+
 .formWrap {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -316,7 +316,7 @@
   transform: translateY(0);
 }
 
-/* â”€â”€ SUCCESS STATE â”€â”€ */
+
 .successState {
   text-align: center;
   padding: 40px 20px;
@@ -371,7 +371,6 @@
   background: rgba(234, 179, 8, 0.08);
 }
 
-/* â”€â”€ ANIMATION â”€â”€ */
 @keyframes fadeSlideUp {
   from {
     opacity: 0;
@@ -383,7 +382,8 @@
   }
 }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+
+/* Responsive */
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;

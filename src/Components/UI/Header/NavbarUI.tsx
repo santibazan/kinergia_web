@@ -11,7 +11,7 @@ interface NavLink {
 const NAV_LINKS: NavLink[] = [
   { label: "Inicio", href: "/" },
   { label: "Sobre nosotros", href: "/nosotros" },
-  { label: "Proyectos", href: "/projects" },
+  // { label: "Proyectos", href: "/projects" },
   { label: "Servicios", href: "/servicios" },
   { label: "Contacto", href: "/contacto" },
 ];
@@ -52,11 +52,11 @@ const NavbarUI: React.FC = () => {
               Sobre nosotros
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/projects" className={styles.navLink}>
               Proyectos
             </Link>
-          </li>
+          </li> */}
 
           {/* Dropdown Servicios */}
           <li
