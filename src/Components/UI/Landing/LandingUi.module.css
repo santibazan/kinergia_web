@@ -1,5 +1,7 @@
-
-.imagen {
+/* ─────────────────────────────────────
+   HERO
+───────────────────────────────────── */
+.hero {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -7,288 +9,244 @@
   background-image: url("../../../images/principal.png");
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.overlay {
+.heroOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.45);
 }
 
-.contenedorPrincipal {
+.heroContent {
   position: relative;
-  max-width: 100%;
-  padding: 160px 10px 60px;
-  color: white;
   z-index: 2;
   text-align: center;
+  padding: 2rem 1.5rem;
+  max-width: 700px;
 }
 
-.contenedorPrincipal h1 {
-  font-size: 2.1rem;
-  margin-bottom: 16px;
+.heroEyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1.25rem;
 }
 
-.contenedorPrincipal h4 {
-  font-size: 1rem;
+.heroTitle {
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
   line-height: 1.6;
 }
 
-/* Misio y vision */
-.misionVision {
-  width: 100%;
-  padding: 5rem 1.5rem;
-  background-color: #ffffff;
-  overflow-x: hidden;
-}
-
-.mvContainer {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.mvImageWrapper {
-  flex: 1 1 45%;
-  min-width: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.mvImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.mvCards {
-  flex: 1 1 55%;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.mvCard {
-  border: 2px solid #7c3aed;
-  border-radius: 20px;
-  padding: 1.75rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 12px rgba(124, 58, 237, 0.08);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.mvCard:hover {
-  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.18);
-  transform: translateY(-2px);
-}
-
-.mvCardTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #5b21b6;
-  margin: 0 0 0.75rem 0;
-  text-align: center;
-}
-
-.mvCardText {
-  font-size: 0.97rem;
-  line-height: 1.7;
-  color: #374151;
-  margin: 0;
-  text-align: center;
-}
-
-/* SERVICIOS */
-.servicios {
+/* ─────────────────────────────────────
+   UNIDADES DE NEGOCIO
+───────────────────────────────────── */
+.units {
   width: 100%;
   padding: 5rem 1.5rem 6rem;
   background-color: #f9fafb;
 }
 
-.serviciosInner {
+.unitsInner {
   max-width: 1100px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
-.serviciosLabel {
-  font-size: 0.75rem;
+/* ── Tarjeta base ── */
+.unitCard {
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.unitCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  border-radius: 20px 20px 0 0;
+}
+
+.unitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Tarjeta Oil oscura ── */
+.unitCardOil {
+  background: #1a2744;
+  border-color: #1a2744;
+}
+
+.unitCardOil::before {
+  background: linear-gradient(90deg, #c0392b, #e84040);
+}
+
+/* ── Header de tarjeta ── */
+.unitCardTop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.unitLabel {
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #6b7280;
-  margin: 0 0 0.6rem;
+  color: #9ca3af;
+  margin: 0 0 3px;
 }
 
-.serviciosTitle {
-  font-size: 1.9rem;
+.unitLabelOil {
+  color: #6b8ab0;
+}
+
+.unitTitle {
+  font-size: 1.5rem;
   font-weight: 700;
   color: #111827;
-  margin: 0 0 2.5rem;
+  margin: 0;
   line-height: 1.2;
 }
 
-.serviciosGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+.unitTitleOil {
+  color: #ffffff;
 }
 
-/* Tarjeta de servicio  */
-.serviceCard {
-  display: flex;
-  flex-direction: column;
+/* ── Ícono ── */
+.unitIcon {
+  width: 64px;
+  height: 64px;
   border-radius: 16px;
-  padding: 2rem;
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  overflow: hidden;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.serviceCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
-}
-
-/* Solar */
-.serviceCardSolar {
-  background: #ffffff;
-  border: 1.5px solid #fde68a;
-}
-
-.serviceCardSolar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
-  border-radius: 16px 16px 0 0;
-}
-
-.serviceCardSolar .serviceIconWrap {
+.unitIconSolar {
   background: #fffbeb;
   color: #d97706;
   border: 1.5px solid #fde68a;
 }
 
-.serviceCardSolar .serviceCardTitle {
-  color: #92400e;
-}
-
-.serviceCardSolar .serviceCardCta {
-  color: #d97706;
-}
-
-/* Oil & Gas */
-.serviceCardOil {
-  background: #1a2744;
-  border: 1.5px solid #1a2744;
-}
-
-.serviceCardOil::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #c0392b, #e84040);
-  border-radius: 16px 16px 0 0;
-}
-
-.serviceCardOil .serviceIconWrap {
+.unitIconOil {
   background: rgba(255, 255, 255, 0.08);
   color: #e84040;
   border: 1.5px solid rgba(255, 255, 255, 0.12);
 }
 
-.serviceCardOil .serviceCardTitle {
-  color: #ffffff;
+/* ── Descripción ── */
+.unitDesc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #6b7280;
+  margin: 0;
 }
 
-.serviceCardOil .serviceCardDesc {
+.unitDescOil {
   color: #b8c5d6;
 }
 
-.serviceCardOil .serviceCardCta {
-  color: #e84040;
-}
-
-.serviceIconWrap {
-  width: 58px;
-  height: 58px;
-  border-radius: 14px;
+/* ── Tags ── */
+.unitTags {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-  flex-shrink: 0;
-}
-
-.serviceContent {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.serviceCardTitle {
-  font-size: 1.35rem;
-  font-weight: 700;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
   margin: 0;
-  line-height: 1.2;
+  padding: 0;
 }
 
-.serviceCardDesc {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: #6b7280;
-  margin: 0;
-  flex: 1;
+.unitTag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 100px;
 }
 
-.serviceCardCta {
+.unitTagSolar {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.unitTagOil {
+  background: rgba(255, 255, 255, 0.08);
+  color: #b8c5d6;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── CTA ── */
+.unitCta {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
+  gap: 8px;
+  font-size: 0.9rem;
   font-weight: 600;
-  margin-top: 0.75rem;
-  transition: gap 0.2s ease;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  margin-top: auto;
+  transition: opacity 0.2s ease, gap 0.2s ease;
+  align-self: flex-start;
 }
 
-.serviceCard:hover .serviceCardCta {
-  gap: 10px;
+.unitCta:hover {
+  opacity: 0.85;
 }
 
-/* RESPONSIVE */
+.unitCta:hover {
+  gap: 12px;
+}
+
+.unitCtaSolar {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.unitCtaOil {
+  background: #e84040;
+  color: #ffffff;
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
 @media (max-width: 768px) {
-  .mvContainer {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .mvImageWrapper {
-    width: 100%;
-    max-height: 280px;
-  }
-
-  .mvCards {
-    width: 100%;
-  }
-
-  .serviciosGrid {
+  .unitsInner {
     grid-template-columns: 1fr;
   }
 
-  .serviciosTitle {
-    font-size: 1.5rem;
+  .heroTitle {
+    font-size: 2rem;
   }
 }

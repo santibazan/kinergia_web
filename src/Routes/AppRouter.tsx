@@ -6,6 +6,7 @@ import { ContactoScreen } from "../Components/Screens/Contacto/ContactoScreen";
 import { NosotrosScreen } from "../Components/Screens/Nosotros/NosotrosScreen";
 import { OilGasScreen } from "../Components/Screens/OilGas/OilGasScreen";
 import { SolarScreen } from "../Components/Screens/Solar/SolarScreen";
+import { ProductosScreen } from "../Components/Screens/Productos/ProductosScreen";
 
 export const AppRouter = () => {
   return (
@@ -15,7 +16,7 @@ export const AppRouter = () => {
       <Route path="/nosotros" element={<NosotrosScreen />} />
       <Route path="/servicios/oilgas" element={<OilGasScreen />} />
       <Route path="/servicios/solar" element={<SolarScreen />} />
-      {/* <Route path="/projects" element={<ProjectsScreen />} /> */}
+      <Route path="/productos" element={<ProductosScreen />} />
     </Routes>
   );
 };

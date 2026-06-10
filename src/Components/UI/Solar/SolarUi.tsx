@@ -120,6 +120,37 @@ const SolarUI: React.FC = () => {
         </div>
       </div>
 
+      {/* ── Misión y Visión ── */}
+      <div className={styles.mvSection}>
+        <div className={styles.mvCard}>
+          <div className={styles.mvCardIcon}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <h3 className={styles.mvCardTitle}>Misión</h3>
+          <p className={styles.mvCardText}>
+            Diseñar e implementar soluciones energéticas eficientes para
+            optimizar consumos, reducir costos y promover un desarrollo
+            sustentable.
+          </p>
+        </div>
+
+        <div className={styles.mvCard}>
+          <div className={styles.mvCardIcon}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3 className={styles.mvCardTitle}>Visión</h3>
+          <p className={styles.mvCardText}>
+            Ser referente en ingeniería y tecnología energética, acompañando
+            la transición hacia un uso más eficiente y sustentable de la
+            energía.
+          </p>
+        </div>
+      </div>
+
       {/* ── Quiénes somos ── */}
       <p className={styles.sectionLabel}>Quiénes somos</p>
       <div className={styles.whoGrid}>

@@ -29,7 +29,6 @@ const FooterUI: React.FC = () => {
             <li><Link to="/nosotros" className={styles.link}>Sobre nosotros</Link></li>
             <li><Link to="/projects" className={styles.link}>Proyectos</Link></li>
             <li><Link to="/contacto" className={styles.link}>Contacto</Link></li>
-            <li><Link to="/contacto" className={styles.link}>Contacto</Link></li>
           </ul>
         </div>
 
