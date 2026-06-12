@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Solar.module.css";
 
 const SERVICES = [
@@ -69,7 +70,7 @@ const arcPath = (i: number) => {
   return `M${CX + R * Math.cos(a0)},${CY + R * Math.sin(a0)} A${R},${R},0,0,1,${CX + R * Math.cos(a1)},${CY + R * Math.sin(a1)}`;
 };
 
-export const SolarUI: React.FC = () => {
+const SolarUI: React.FC = () => {
   return (
     <section className={styles.section}>
 
@@ -255,4 +256,4 @@ export const SolarUI: React.FC = () => {
   );
 };
 
-
+export default SolarUI;
