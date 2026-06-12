@@ -3,18 +3,16 @@ import { Link } from "react-router";
 import styles from "./Navbar.module.css";
 import logo from "../../../images/logo.png";
 
-interface NavLink {
-  label: string;
-  href: string;
-}
+// interface NavLink {
+//   label: string;
+//   href: string;
+// }
 
-const NAV_LINKS: NavLink[] = [
-  // { label: "Inicio", href: "/" },
-  // { label: "Sobre nosotros", href: "/nosotros" },
-  { label: "Productos", href: "/productos" },
-  { label: "Servicios", href: "/servicios" },
-  { label: "Contacto", href: "/contacto" },
-];
+// const NAV_LINKS: NavLink[] = [
+//   { label: "Productos", href: "/productos" },
+//   { label: "Servicios", href: "/servicios" },
+//   { label: "Contacto", href: "/contacto" },
+// ];
 
 const SERVICES = [
   { label: "Oil & Gas", href: "/servicios/oilgas" },
@@ -121,7 +119,6 @@ const NavbarUI: React.FC = () => {
         </button>
       </div>
 
-      {/* Menú móvil */}
       {/* Menú móvil */}
       <div
         className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ""}`}
