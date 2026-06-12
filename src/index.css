@@ -2,3 +2,7 @@ body {
   margin: 0; 
   font-family: "Quicksand";
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* altura de tu navbar */
+}

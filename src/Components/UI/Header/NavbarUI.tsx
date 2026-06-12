@@ -9,8 +9,8 @@ interface NavLink {
 }
 
 const NAV_LINKS: NavLink[] = [
-  { label: "Inicio", href: "/" },
-  { label: "Sobre nosotros", href: "/nosotros" },
+  // { label: "Inicio", href: "/" },
+  // { label: "Sobre nosotros", href: "/nosotros" },
   { label: "Productos", href: "/productos" },
   { label: "Servicios", href: "/servicios" },
   { label: "Contacto", href: "/contacto" },
@@ -42,16 +42,16 @@ const NavbarUI: React.FC = () => {
         {/* Links — desktop */}
         {/* Links — desktop */}
         <ul className={styles.navLinks}>
-          <li>
+          {/* <li>
             <Link to="/" className={styles.navLink}>
               Inicio
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link to="/nosotros" className={styles.navLink}>
               Sobre nosotros
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link to="/projects" className={styles.navLink}>
               Proyectos
@@ -63,7 +63,7 @@ const NavbarUI: React.FC = () => {
               Productos
             </Link>
           </li>
-          
+
           {/* Dropdown Servicios */}
           <li
             className={styles.dropdown}
@@ -122,23 +122,22 @@ const NavbarUI: React.FC = () => {
       </div>
 
       {/* Menú móvil */}
+      {/* Menú móvil */}
       <div
         className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ""}`}
       >
         <ul className={styles.mobileNavLinks}>
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <Link
-                to={link.href}
-                className={styles.mobileNavLink}
-                onClick={closeMenu}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          <li>
+            <Link
+              to="/productos"
+              className={styles.mobileNavLink}
+              onClick={closeMenu}
+            >
+              Productos
+            </Link>
+          </li>
 
-          {/* Servicios móvil */}
+          {/* Servicios móvil — dropdown */}
           <li>
             <button
               className={styles.mobileDropdownTrigger}
@@ -176,6 +175,16 @@ const NavbarUI: React.FC = () => {
                 ))}
               </ul>
             )}
+          </li>
+
+          <li>
+            <Link
+              to="/contacto"
+              className={styles.mobileNavLink}
+              onClick={closeMenu}
+            >
+              Contacto
+            </Link>
           </li>
         </ul>
       </div>

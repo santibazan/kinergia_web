@@ -155,13 +155,13 @@ const ProductosUI: React.FC = () => {
                   ))}
                 </ul>
 
-                {/* {p.tagline && (
+                {p.tagline && (
                   <div className={styles.tagline}>{p.tagline}</div>
                 )}
 
                 {p.note && (
                   <p className={styles.note}>{p.note}</p>
-                )} */}
+                )}
 
                 <a
                   href="https://wa.me/541132973461"

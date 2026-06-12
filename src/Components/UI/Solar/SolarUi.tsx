@@ -1,60 +1,11 @@
 import styles from "./Solar.module.css";
 
-const WHO_WE_ARE = [
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-      </svg>
-    ),
-    text: "Empresa de ingeniería y tecnología energética",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-      </svg>
-    ),
-    text: "Optimizamos el uso de la energía en viviendas, comercios e industrias",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-      </svg>
-    ),
-    text: "Reducimos costos energéticos y emisiones",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-      </svg>
-    ),
-    text: "Integramos eficiencia energética y energías renovables",
-  },
-];
-
-const CHALLENGES = [
-  "Crecimiento del costo de la energía",
-  "Necesidad de mayor eficiencia energética en instalaciones",
-  "Reducción de emisiones y presión regulatoria",
-  "La transición energética requiere ingeniería y tecnología",
-];
-
-const STEPS = [
-  { num: "1", title: "Medir", desc: "En qué gastamos la energía" },
-  { num: "2", title: "Identificar pérdidas", desc: "Y saber cuánto nos cuesta esa pérdida" },
-  { num: "3", title: "Optimizar", desc: "Evaluar reducción de consumo energético. Evaluación de tecnologías." },
-  { num: "4", title: "Transformar", desc: "Integrar energías renovables" },
-  { num: "5", title: "Resultado", desc: "Menor consumo, menores costos y mayor sustentabilidad" },
-];
-
 const SERVICES = [
   {
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
       </svg>
     ),
     name: "Medición y gestión de huella de carbono",
@@ -70,7 +21,9 @@ const SERVICES = [
   {
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+        <path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        <circle cx="12" cy="12" r="4"/>
       </svg>
     ),
     name: "Optimización energética de las instalaciones",
@@ -78,7 +31,10 @@ const SERVICES = [
   {
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+        <rect x="2" y="7" width="20" height="14" rx="2"/>
+        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+        <line x1="12" y1="12" x2="12" y2="16"/>
+        <line x1="10" y1="14" x2="14" y2="14"/>
       </svg>
     ),
     name: "Diseño e implementación de soluciones solares",
@@ -92,11 +48,63 @@ const VALUE_PROPS = [
   "Reducción de huella de carbono",
 ];
 
+// Posiciones de los 5 nodos en círculo (r=110, centro 220,188)
+// ángulos: -90°, -90°+72°, -90°+144°, -90°+216°, -90°+288°
+const CX = 220, CY = 188, R = 110;
+const ang = (i: number) => (i / 5) * 2 * Math.PI - Math.PI / 2;
+const nx = (i: number) => CX + R * Math.cos(ang(i));
+const ny = (i: number) => CY + R * Math.sin(ang(i));
+
+const STEPS = [
+  { title: "Medir",       label: ["Medir:", "en qué gastamos", "la energía"] },
+  { title: "Identificar", label: ["Identificar pérdidas:", "y saber cuánto", "nos cuesta"] },
+  { title: "Optimizar",   label: ["Optimizar:", "evaluar reducción", "de consumo"] },
+  { title: "Transformar", label: ["Transformar:", "integrar energías", "renovables"] },
+  { title: "Resultado",   label: ["Resultado:", "menor consumo", "y sustentabilidad"] },
+];
+
+const arcPath = (i: number) => {
+  const a0 = ang(i) + 0.22;
+  const a1 = ang((i + 1) % 5) - 0.22;
+  return `M${CX + R * Math.cos(a0)},${CY + R * Math.sin(a0)} A${R},${R},0,0,1,${CX + R * Math.cos(a1)},${CY + R * Math.sin(a1)}`;
+};
+
 const SolarUI: React.FC = () => {
   return (
     <section className={styles.section}>
 
-      {/* ── Hero ── */}
+      {/* ── 1. Misión y Visión ── */}
+      <div className={styles.mvSection}>
+        <div className={styles.mvCard}>
+          <div className={styles.mvCardIcon}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <h3 className={styles.mvCardTitle}>Misión</h3>
+          <p className={styles.mvCardText}>
+            Diseñar e implementar soluciones energéticas eficientes para
+            optimizar consumos, reducir costos y promover un desarrollo sustentable.
+          </p>
+        </div>
+        <div className={styles.mvCard}>
+          <div className={styles.mvCardIcon}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3 className={styles.mvCardTitle}>Visión</h3>
+          <p className={styles.mvCardText}>
+            Ser referente en ingeniería y tecnología energética, acompañando
+            la transición hacia un uso más eficiente y sustentable de la energía.
+          </p>
+        </div>
+      </div>
+
+      {/* ── 2. Hero ── */}
       <div className={styles.hero}>
         <p className={styles.heroTag}>Kinergia · Solar</p>
         <h1 className={styles.heroTitle}>
@@ -120,84 +128,62 @@ const SolarUI: React.FC = () => {
         </div>
       </div>
 
-      {/* ── Misión y Visión ── */}
-      <div className={styles.mvSection}>
-        <div className={styles.mvCard}>
-          <div className={styles.mvCardIcon}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-            </svg>
-          </div>
-          <h3 className={styles.mvCardTitle}>Misión</h3>
-          <p className={styles.mvCardText}>
-            Diseñar e implementar soluciones energéticas eficientes para
-            optimizar consumos, reducir costos y promover un desarrollo
-            sustentable.
-          </p>
-        </div>
-
-        <div className={styles.mvCard}>
-          <div className={styles.mvCardIcon}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-            </svg>
-          </div>
-          <h3 className={styles.mvCardTitle}>Visión</h3>
-          <p className={styles.mvCardText}>
-            Ser referente en ingeniería y tecnología energética, acompañando
-            la transición hacia un uso más eficiente y sustentable de la
-            energía.
-          </p>
-        </div>
-      </div>
-
-      {/* ── Quiénes somos ── */}
-      <p className={styles.sectionLabel}>Quiénes somos</p>
-      <div className={styles.whoGrid}>
-        {WHO_WE_ARE.map((w) => (
-          <div key={w.text} className={styles.whoCard}>
-            <div className={styles.whoIcon}>{w.icon}</div>
-            <p className={styles.whoText}>{w.text}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* ── El desafío energético ── */}
-      <div className={styles.challengeBox}>
-        <h2 className={styles.challengeTitle}>El desafío energético</h2>
-        <p className={styles.challengeIntro}>
-          La transición energética ya está en marcha. El costo de la energía
-          convencional tiende a aumentar, mientras que las tecnologías renovables
-          reducen su costo año a año.
-        </p>
-        <div className={styles.challengeBars}>
-          {CHALLENGES.map((c) => (
-            <div key={c} className={styles.challengeBar}>
-              <span className={styles.challengeBarDash} aria-hidden="true" />
-              <span className={styles.challengeBarText}>{c}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ── Nuestro enfoque ── */}
-      <p className={styles.sectionLabel}>Nuestro enfoque</p>
+      {/* ── 3. Nuestro enfoque ── */}
+      <p id="enfoque" className={styles.sectionLabel}>Nuestro enfoque</p>
       <p className={styles.enfoqueMotto}>"Lo que no medimos no lo gestionamos"</p>
-      <div className={styles.steps}>
-        {STEPS.map((s, i) => (
-          <div key={s.num} className={styles.step}>
-            <div className={styles.stepNum}>{s.num}</div>
-            {i < STEPS.length - 1 && <div className={styles.stepArrow} aria-hidden="true" />}
-            <div className={styles.stepContent}>
-              <strong className={styles.stepTitle}>{s.title}</strong>
-              <p className={styles.stepDesc}>{s.desc}</p>
-            </div>
-          </div>
-        ))}
+
+      <div className={styles.loopWrapper}>
+        <svg viewBox="0 0 440 400" className={styles.loopSvg} aria-label="Ciclo continuo de mejora energética">
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M1,1 L7,4 L1,7 Z" fill="#16a34a"/>
+            </marker>
+          </defs>
+
+          {/* Guía circular */}
+          <circle cx={CX} cy={CY} r={R} fill="none" stroke="#d1fae5" strokeWidth="2" strokeDasharray="5 5"/>
+
+          {/* Arcos con flechas */}
+          {[0,1,2,3,4].map(i => (
+            <path key={i} d={arcPath(i)} fill="none" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#arr)"/>
+          ))}
+
+          {/* Nodos */}
+          {STEPS.map((s, i) => (
+            <g key={i}>
+              <circle cx={nx(i)} cy={ny(i)} r="22" fill="#f0fdf4" stroke="#16a34a" strokeWidth="2.5"/>
+              <text x={nx(i)} y={ny(i) - 3} textAnchor="middle" fontSize="14" fontWeight="700" fill="#16a34a" fontFamily="sans-serif">{i + 1}</text>
+              <text x={nx(i)} y={ny(i) + 10} textAnchor="middle" fontSize="8" fill="#16a34a" fontFamily="sans-serif">{s.title}</text>
+            </g>
+          ))}
+
+          {/* Etiquetas alrededor */}
+          {STEPS.map((s, i) => {
+            const lr = R + 56;
+            const lx = CX + lr * Math.cos(ang(i));
+            const ly = CY + lr * Math.sin(ang(i));
+            return s.label.map((line, j) => (
+              <text
+                key={`${i}-${j}`}
+                x={lx} y={ly + (j - 0.5) * 14}
+                textAnchor="middle"
+                fontSize={j === 0 ? "11" : "10"}
+                fontWeight={j === 0 ? "600" : "400"}
+                fill={j === 0 ? "#374151" : "#6b7280"}
+                fontFamily="sans-serif"
+              >
+                {line}
+              </text>
+            ));
+          })}
+
+          {/* Ícono central */}
+          <text x={CX} y={CY + 10} textAnchor="middle" fontSize="30" fill="#bbf7d0" fontFamily="sans-serif">↺</text>
+        </svg>
       </div>
 
-      {/* ── Servicios ── */}
-      <p className={styles.sectionLabel}>Servicios</p>
+      {/* ── 4. Servicios ── */}
+      <p id="servicios" className={styles.sectionLabel}>Servicios</p>
       <div className={styles.services}>
         {SERVICES.map((s) => (
           <div key={s.name} className={styles.serviceCard}>
@@ -207,8 +193,8 @@ const SolarUI: React.FC = () => {
         ))}
       </div>
 
-      {/* ── Propuesta de valor ── */}
-      <div className={styles.valueBox}>
+      {/* ── 5. Propuesta de valor ── */}
+      <div id="propuesta"className={styles.valueBox}>
         <h2 className={styles.valueTitle}>Propuesta de valor</h2>
         <p className={styles.valueIntro}>
           Kinergia Solar integra eficiencia energética y energías renovables para
@@ -225,8 +211,8 @@ const SolarUI: React.FC = () => {
         </div>
       </div>
 
-      {/* ── Perfil del profesional ── */}
-      <div className={styles.profile}>
+      {/* ── 6. Perfil ── */}
+      <div id="equipo" className={styles.profile}>
         <div className={styles.profileAvatar}>AS</div>
         <div className={styles.profileInfo}>
           <div className={styles.profileHeader}>
@@ -252,7 +238,7 @@ const SolarUI: React.FC = () => {
         </div>
       </div>
 
-      {/* ── CTA ── */}
+      {/* ── 7. CTA ── */}
       <div className={styles.cta}>
         <div className={styles.ctaText}>
           <strong className={styles.ctaHeading}>¿Querés optimizar tu consumo energético?</strong>

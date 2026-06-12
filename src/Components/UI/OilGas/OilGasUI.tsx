@@ -98,7 +98,7 @@ const OilGasUI: React.FC = () => {
       </div>
 
       {/* ── Áreas de servicio ── */}
-      <p className={styles.sectionLabel}>Áreas de servicio</p>
+      <p id="servicios" className={styles.sectionLabel}>Áreas de servicio</p>
 
       <div className={styles.pillars}>
         {PILLARS.map((p) => (
@@ -117,7 +117,7 @@ const OilGasUI: React.FC = () => {
       </p>
 
       {/* ── Propuesta de valor ── */}
-      <div className={styles.valueBox}>
+      <div id="propuesta" className={styles.valueBox}>
         <h2 className={styles.valueTitle}>Propuesta de valor</h2>
         <p className={styles.valueIntro}>
           Kinergia Oil &amp; Gas busca transformarse en un socio técnico confiable
@@ -135,7 +135,7 @@ const OilGasUI: React.FC = () => {
       </div>
 
       {/* ── Equipo ── */}
-      <div className={styles.team}>
+      <div id="equipo" className={styles.team}>
         <h2 className={styles.teamTitle}>Nuestro equipo</h2>
         <div className={styles.members}>
           {TEAM.map((m) => (

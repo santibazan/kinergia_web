@@ -2,87 +2,81 @@
    HERO
 ───────────────────────────────────── */
 .hero {
-  position: relative;
-  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
-  background-image: url("../../../images/principal.png");
-  background-size: cover;
-  background-position: center;
+  max-width: 100%;
+  overflow: visible;
+  background: linear-gradient(160deg, #0f172a 0%, #1a2744 50%, #0f2417 100%);
+  padding: 6rem 1.5rem 4rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-.heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
 }
 
 .heroContent {
-  position: relative;
-  z-index: 2;
   text-align: center;
-  padding: 2rem 1.5rem;
-  max-width: 700px;
+  max-width: 680px;
+  margin-bottom: 3.5rem;
 }
 
 .heroEyebrow {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 1.25rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 1rem;
 }
 
 .heroTitle {
-  font-size: clamp(2.2rem, 6vw, 3.8rem);
-  font-weight: 800;
+  font-size: clamp(1.75rem, 3vw, 4rem);
+  font-weight: 80;
   color: #ffffff;
-  line-height: 1.1;
+  line-height: 1.12;
   margin: 0 0 1.25rem;
   letter-spacing: -0.5px;
+  word-break: break-word;
 }
 
 .heroSubtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.15rem);
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.65);
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+/* ── Tarjetas dentro del hero ── */
+.unitsRow {
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 3;
+  /* en lugar de bottom negativo, las tarjetas se quedan dentro del hero
+     y el desafio tiene padding-top generoso */
 }
 
 /* ─────────────────────────────────────
-   UNIDADES DE NEGOCIO
+   TARJETAS DE UNIDAD
 ───────────────────────────────────── */
-.units {
-  width: 100%;
-  padding: 5rem 1.5rem 6rem;
-  background-color: #f9fafb;
-}
-
-.unitsInner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-/* ── Tarjeta base ── */
 .unitCard {
   background: #ffffff;
-  border: 1.5px solid #e5e7eb;
   border-radius: 20px;
-  padding: 2.25rem 2rem;
+  padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.1rem;
+  text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
 }
 
 .unitCard::before {
@@ -90,26 +84,29 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
   border-radius: 20px 20px 0 0;
 }
 
 .unitCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.32);
 }
 
-/* ── Tarjeta Oil oscura ── */
+/* Solar */
+.unitCardSolar::before {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+/* Oil */
 .unitCardOil {
   background: #1a2744;
-  border-color: #1a2744;
 }
 
 .unitCardOil::before {
   background: linear-gradient(90deg, #c0392b, #e84040);
 }
 
-/* ── Header de tarjeta ── */
+/* Header */
 .unitCardTop {
   display: flex;
   align-items: center;
@@ -117,7 +114,7 @@
 }
 
 .unitLabel {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -125,27 +122,23 @@
   margin: 0 0 3px;
 }
 
-.unitLabelOil {
-  color: #6b8ab0;
-}
+.unitLabelOil { color: #6b8ab0; }
 
 .unitTitle {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #111827;
   margin: 0;
   line-height: 1.2;
 }
 
-.unitTitleOil {
-  color: #ffffff;
-}
+.unitTitleOil { color: #ffffff; }
 
-/* ── Ícono ── */
+/* Ícono */
 .unitIcon {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,94 +152,329 @@
 }
 
 .unitIconOil {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   color: #e84040;
-  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255,255,255,0.12);
 }
 
-/* ── Descripción ── */
+/* Descripción */
 .unitDesc {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.75;
   color: #6b7280;
   margin: 0;
 }
 
-.unitDescOil {
-  color: #b8c5d6;
+.unitDescOil { color: #b8c5d6; }
+
+/* Tags — sección con label */
+.unitTagsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-/* ── Tags ── */
+.unitTagsLabel {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.unitTagsLabelOil { color: #4b6a8a; }
+
 .unitTags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* Tag como botón */
 .unitTag {
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 11px;
   border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease, gap 0.15s ease;
+  text-decoration: none;
+}
+
+.unitTag:hover {
+  transform: translateY(-1px);
+  opacity: 0.85;
+  gap: 7px;
+}
+
+.unitTag:active {
+  transform: scale(0.97);
 }
 
 .unitTagSolar {
-  background: #fffbeb;
+  background: #fef3c7;
   color: #92400e;
   border: 1px solid #fde68a;
 }
 
-.unitTagOil {
-  background: rgba(255, 255, 255, 0.08);
-  color: #b8c5d6;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.unitTagSolar:hover {
+  background: #fde68a;
 }
 
-/* ── CTA ── */
+.unitTagOil {
+  background: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.unitTagOil:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+/* CTA */
 .unitCta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
+  gap: 7px;
+  font-size: 0.88rem;
   font-weight: 600;
-  text-decoration: none;
-  padding: 12px 22px;
+  padding: 11px 20px;
   border-radius: 10px;
   margin-top: auto;
-  transition: opacity 0.2s ease, gap 0.2s ease;
   align-self: flex-start;
+  text-decoration: none;
+  transition: opacity 0.2s ease, gap 0.2s ease;
 }
 
-.unitCta:hover {
-  opacity: 0.85;
+.unitCta:hover { gap: 11px; opacity: 0.9; }
+
+.unitCtaSolar { background: #f59e0b; color: #ffffff; }
+.unitCtaOil   { background: #e84040; color: #ffffff; }
+
+/* ─────────────────────────────────────
+   DESAFÍO ENERGÉTICO
+───────────────────────────────────── */
+.desafio {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #f9fafb;
+  padding: 5rem 1.5rem 6rem;
+  position: relative;
+  z-index: 1;
 }
 
-.unitCta:hover {
-  gap: 12px;
+.desafioInner {
+  max-width: 1100px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-.unitCtaSolar {
-  background: #f59e0b;
+.desafioHeader {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+}
+
+.desafioEyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #16a34a;
+  margin: 0 0 0.5rem;
+}
+
+.desafioTitle {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 0.85rem;
+  line-height: 1.15;
+  word-break: break-word;
+}
+
+.desafioSubtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Grid de cards */
+.desafioGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.desafioCard {
+  background: #ffffff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 12px;
+  border-left: 4px solid #16a34a;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-sizing: border-box;
+  min-width: 0;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.desafioCard:hover {
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.1);
+  transform: translateY(-2px);
+}
+
+.desafioIcon {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.desafioCardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.desafioCardDesc {
+  font-size: 0.87rem;
+  color: #6b7280;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Banner inferior */
+.desafioBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.desafioBanner span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.desafioBannerCta {
+  display: inline-flex;
+  align-items: center;
+  background: #16a34a;
   color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
 }
 
-.unitCtaOil {
-  background: #e84040;
-  color: #ffffff;
-}
+.desafioBannerCta:hover { opacity: 0.85; }
 
 /* ─────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────── */
 @media (max-width: 768px) {
-  .unitsInner {
+  .hero {
+    padding: 4rem 1.25rem 3rem;
+  }
+
+  .heroContent {
+    width: 100%;
+  }
+
+  .unitsRow {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .desafio {
+    padding-top: 3rem;
+  }
+
+  .desafioGrid {
     grid-template-columns: 1fr;
   }
 
-  .heroTitle {
-    font-size: 2rem;
+  .desafioBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
   }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.6rem;
+    letter-spacing: -0.25px;
+  }
+
+  .heroSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .unitCard {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* ─────────────────────────────────────
+   ANIMACIONES DE SCROLL
+───────────────────────────────────── */
+
+/* Fade desde abajo — header y banner */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Slide desde la izquierda */
+.slideLeft {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.55s ease, transform 2s ease;
+}
+
+/* Slide desde la derecha */
+.slideRight {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.55s ease, transform 2s ease;
+}
+
+/* Estado final — cuando el IntersectionObserver agrega .visible */
+.visible {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
 }
