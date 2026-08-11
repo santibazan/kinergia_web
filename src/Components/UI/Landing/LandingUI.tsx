@@ -4,6 +4,7 @@ import { DesafioSection } from "./DesafiaSeccion";
 
 
 const SOLAR_TAGS = [
+  { label: "calculadora", hash: "#calculadora" },
   { label: "Nuestro enfoque", hash: "#enfoque" },
   { label: "Servicios",       hash: "#servicios" },
   { label: "Propuesta de valor", hash: "#propuesta" },
