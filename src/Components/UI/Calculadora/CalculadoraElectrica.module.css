@@ -1,8 +1,16 @@
+/* ── Página ── */
+.page {
+  background: #f8fafc;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+}
+
 /* ── Wrapper ── */
 .wrapper {
   background: linear-gradient(160deg, #0f172a 0%, #14532d 100%);
   border-radius: 16px;
-  margin-bottom: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -30,7 +38,7 @@
 
 .title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 800;
   line-height: 1.15;
   margin: 0 0 1rem;
@@ -47,51 +55,62 @@
   font-weight: 300;
 }
 
-.bullets {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem;
+/* ── Bloque informativo ── */
+.info {
+  border-top: 0.5px solid rgba(255,255,255,0.15);
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 1rem;
 }
 
-.bullets li {
-  display: flex;
-  align-items: flex-start;
-  gap: 9px;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.75);
-  line-height: 1.5;
-}
-
-.check {
-  color: #4ade80;
+.infoTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
   font-weight: 700;
-  flex-shrink: 0;
+  color: #ffffff;
+  margin: 0;
 }
 
-/* Nota técnica (aparece tras calcular) */
-.techNote {
+.infoText {
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.infoItem {
   background: rgba(255,255,255,0.06);
   border: 0.5px solid rgba(255,255,255,0.12);
   border-radius: 10px;
-  padding: 1rem 1.25rem;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.9;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.techNoteTitle {
-  font-size: 0.72rem;
+.infoItemTitle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.infoItemTag {
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 1px;
   text-transform: uppercase;
+  letter-spacing: 1px;
   color: #4ade80;
-  margin: 0 0 0.5rem;
+  background: rgba(74,222,128,0.14);
+  padding: 3px 9px;
+  border-radius: 100px;
 }
-
-.techNote strong { color: rgba(255,255,255,0.9); }
 
 /* ── Card derecha ── */
 .card {
@@ -104,6 +123,9 @@
   gap: 1rem;
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
   box-sizing: border-box;
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
 }
 
 .cardTitle {
@@ -218,7 +240,9 @@
   box-sizing: border-box;
 }
 
-.inputWrap .input { padding-left: 26px; }
+/* Deja lugar al prefijo / sufijo para que no se pisen con el número */
+.inputPrefixed { padding-left: 26px; }
+.inputSuffixed { padding-right: 58px; }
 
 .input:focus {
   outline: none;
@@ -340,12 +364,29 @@
 
 .investRow strong { color: #0f172a; }
 
-.disclaimer {
-  font-size: 0.68rem;
-  color: #94a3b8;
+/* ── Cierre del resultado ── */
+.pitch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  font-size: 0.8rem;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+.pitchLead {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: #0f172a;
   margin: 0;
-  line-height: 1.5;
-  font-style: italic;
+}
+
+.pitchText { margin: 0; }
+
+.pitchClose {
+  margin: 0;
+  font-weight: 700;
+  color: #16a34a;
 }
 
 /* ── WhatsApp btn ── */
@@ -383,9 +424,14 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  .page { padding: 1.5rem 1rem; }
   .inner { grid-template-columns: 1fr; }
   .left { padding: 2rem 1.5rem 1rem; }
-  .card { margin: 0 1rem 1rem; padding: 1.25rem; }
+  .card {
+    margin: 0 1rem 1rem;
+    padding: 1.25rem;
+    position: static;
+  }
   .metrics { grid-template-columns: repeat(3, 1fr); }
   .savingsBox { grid-template-columns: 1fr auto 1fr; }
 }

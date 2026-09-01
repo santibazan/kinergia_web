@@ -21,50 +21,69 @@
 }
 
 .mvCard {
-  border: 2px solid #7c3aed;
-  border-radius: 16px;
-  padding: 1.75rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 12px rgba(124, 58, 237, 0.08);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.6rem;
+  align-items: flex-start;
+  gap: 1.1rem;
+  background: #ffffff;
+  border: 0.5px solid #e5e7eb;
+  border-left: 3px solid #16a34a;
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
   box-sizing: border-box;
 }
 
 .mvCard:hover {
-  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.18);
   transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(22, 163, 74, 0.12);
 }
 
 .mvCardIcon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #f3f0ff;
-  color: #7c3aed;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #1a3a1a;
+  color: #fbbf24;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
+.mvCardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
 .mvCardTitle {
-  font-size: 1.1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #5b21b6;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   margin: 0;
 }
 
+.mvCardDash {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fbbf24;
+  border-radius: 2px;
+}
+
 .mvCardText {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.7;
-  color: #374151;
+  color: #4b5563;
   margin: 0;
 }
+
+
+
 
 /* ─────────────────────────────────────
    HERO
@@ -82,7 +101,9 @@
 .hero::before {
   content: '';
   position: absolute;
-  top: 0; right: 0; bottom: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   width: 45%;
   background: linear-gradient(135deg, #d97706 0%, #1a3a1a 65%);
   opacity: 0.3;
@@ -127,8 +148,8 @@
   align-items: center;
   gap: 10px;
   margin-top: 1.75rem;
-  background: rgba(255,255,255,0.07);
-  border: 0.5px solid rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.07);
+  border: 0.5px solid rgba(255, 255, 255, 0.18);
   border-radius: 100px;
   padding: 8px 20px;
   font-size: 0.82rem;
@@ -181,54 +202,10 @@
   box-sizing: border-box;
 }
 
-.loopInner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
-
 .loopSvg {
   width: 100%;
   max-width: 420px;
   height: auto;
-}
-
-.loopInfo {
-  background: #ffffff;
-  border: 0.5px solid #bbf7d0;
-  border-radius: 10px;
-  padding: 10px 20px;
-  text-align: center;
-  min-height: 50px;
-  width: 280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-}
-
-.loopInfoTitle {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #111827;
-  margin: 0;
-}
-
-.loopInfoDesc {
-  font-size: 0.82rem;
-  color: #6b7280;
-  margin: 0;
-}
-
-.loopNote {
-  font-size: 0.75rem;
-  color: #16a34a;
-  font-style: italic;
-  margin: 0;
-  text-align: center;
 }
 
 /* ─────────────────────────────────────
@@ -258,7 +235,9 @@
   box-shadow: 0 4px 16px rgba(22, 163, 74, 0.12);
 }
 
-.serviceIcon { color: #16a34a; }
+.serviceIcon {
+  color: #16a34a;
+}
 
 .serviceName {
   font-size: 0.88rem;
@@ -470,12 +449,113 @@
   white-space: nowrap;
 }
 
-.ctaBtn:hover { opacity: 0.85; }
+.ctaBtn:hover {
+  opacity: 0.85;
+}
+
+/* ─────────────────────────────────────
+   CALCULADORAS
+───────────────────────────────────── */
+.calcGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.calcCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: #ffffff;
+  border: 0.5px solid #e5e7eb;
+  border-top: 3px solid #16a34a;
+  border-radius: 12px;
+  padding: 1.75rem;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.calcCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(22, 163, 74, 0.14);
+}
+
+.calcCardSolar {
+  border-top-color: #d97706;
+}
+
+.calcCardSolar:hover {
+  box-shadow: 0 6px 24px rgba(217, 119, 6, 0.16);
+}
+
+.calcIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.calcCardSolar .calcIcon {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.calcTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.calcDesc {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.65;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.calcCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #16a34a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+  transition: gap 0.2s ease;
+}
+
+.calcCardSolar .calcCta {
+  color: #d97706;
+}
+
+.calcCard:hover .calcCta {
+  gap: 12px;
+}
 
 /* ─────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────── */
 @media (max-width: 768px) {
+  .mvCard {
+    padding: 1.35rem;
+  }
+
   .hero {
     padding: 2.5rem 1.75rem;
   }
@@ -508,6 +588,10 @@
 
   .services {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .calcGrid {
+    grid-template-columns: 1fr;
   }
 }
 

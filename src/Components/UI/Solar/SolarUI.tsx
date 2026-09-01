@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Solar.module.css";
-import CalculadoraAhorroUi from "../Calculadora/CalculadoraAhorroUI";
+import { Link } from "react-router-dom";
+import { CalculadoraTermotanqueUI } from "../Calculadora/CalculadoraTermotanqueUI";
+import { CalculadoraElectricaUI } from "../Calculadora/CalculadoraElectricaUI";
 
 const SERVICES = [
   {
@@ -122,13 +124,9 @@ const arcPath = (i: number) => {
   return `M${CX + R * Math.cos(a0)},${CY + R * Math.sin(a0)} A${R},${R},0,0,1,${CX + R * Math.cos(a1)},${CY + R * Math.sin(a1)}`;
 };
 
-const SolarUI: React.FC = () => {
+export const SolarUI: React.FC = () => {
   return (
     <section className={styles.section}>
-      <div id="calculadora">
-        <CalculadoraAhorroUi />
-      </div>
-
       {/* ── 1. Misión y Visión ── */}
       <div className={styles.mvSection}>
         <div className={styles.mvCard}>
@@ -144,17 +142,21 @@ const SolarUI: React.FC = () => {
               strokeLinejoin="round"
             >
               <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="8" x2="12" y2="12" />
-              <line x1="12" y1="16" x2="12.01" y2="16" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
             </svg>
           </div>
-          <h3 className={styles.mvCardTitle}>Misión</h3>
-          <p className={styles.mvCardText}>
-            Diseñar e implementar soluciones energéticas eficientes para
-            optimizar consumos, reducir costos y promover un desarrollo
-            sustentable.
-          </p>
+          <div className={styles.mvCardBody}>
+            <h3 className={styles.mvCardTitle}>Misión</h3>
+            <span className={styles.mvCardDash} aria-hidden="true" />
+            <p className={styles.mvCardText}>
+              Diseñar e implementar soluciones energéticas eficientes para
+              optimizar consumos, reducir costos y promover un desarrollo
+              sustentable.
+            </p>
+          </div>
         </div>
+
         <div className={styles.mvCard}>
           <div className={styles.mvCardIcon}>
             <svg
@@ -171,11 +173,15 @@ const SolarUI: React.FC = () => {
               <circle cx="12" cy="12" r="3" />
             </svg>
           </div>
-          <h3 className={styles.mvCardTitle}>Visión</h3>
-          <p className={styles.mvCardText}>
-            Ser referente en ingeniería y tecnología energética, acompañando la
-            transición hacia un uso más eficiente y sustentable de la energía.
-          </p>
+          <div className={styles.mvCardBody}>
+            <h3 className={styles.mvCardTitle}>Visión</h3>
+            <span className={styles.mvCardDash} aria-hidden="true" />
+            <p className={styles.mvCardText}>
+              Ser referente en ingeniería y tecnología energética, acompañando
+              la transición hacia un uso más eficiente y sustentable de la
+              energía.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -359,7 +365,7 @@ const SolarUI: React.FC = () => {
       {/* ── 6. Perfil ── */}
       <div id="equipo" className={styles.profile}>
         <div className={styles.profileAvatar}>AS</div>
-        <div className={styles.profileInfo}>
+        <div>
           <div className={styles.profileHeader}>
             <strong className={styles.profileName}>Aldo Sarelli</strong>
             <a
@@ -388,6 +394,88 @@ const SolarUI: React.FC = () => {
           </p>
         </div>
       </div>
+      {/* ── 7. Calculadoras ── */}
+      <p id="calculadora" className={styles.sectionLabel}>
+        Calculadoras
+      </p>
+      <div className={styles.calcGrid}>
+        <Link to="/calculadora-electrica" className={styles.calcCard}>
+          <span className={styles.calcIcon}>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polygon points="13 2 3 14 10 14 9 22 19 10 12 10 13 2" />
+            </svg>
+          </span>
+          <h3 className={styles.calcTitle}>Calculadora Eléctrica</h3>
+          <p className={styles.calcDesc}>
+            Dimensioná tu sistema de paneles solares y estimá cuánto podés
+            ahorrar en tu factura de luz.
+          </p>
+          <span className={styles.calcCta}>
+            Ir a la calculadora
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
+        </Link>
+
+        <Link
+          to="/calculadora-termotanque"
+          className={`${styles.calcCard} ${styles.calcCardSolar}`}
+        >
+          <span className={styles.calcIcon}>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+            </svg>
+          </span>
+          <h3 className={styles.calcTitle}>Calculadora Solar</h3>
+          <p className={styles.calcDesc}>
+            Dimensioná tu termotanque solar y estimá el ahorro en gas para el
+            agua caliente de tu hogar.
+          </p>
+          <span className={styles.calcCta}>
+            Ir a la calculadora
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
+        </Link>
+      </div>
 
       {/* ── 7. CTA ── */}
       <div className={styles.cta}>
@@ -406,5 +494,3 @@ const SolarUI: React.FC = () => {
     </section>
   );
 };
-
-export default SolarUI;

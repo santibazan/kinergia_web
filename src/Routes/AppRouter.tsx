@@ -7,6 +7,8 @@ import { ContactoScreen } from "../Components/Screens/Contacto/ContactoScreen";
 import { OilGasScreen } from "../Components/Screens/OilGas/OilGasScreen";
 import { SolarScreen } from "../Components/Screens/Solar/SolarScreen";
 import { ProductosScreen } from "../Components/Screens/Productos/ProductosScreen";
+import { CalculadoraElectricaScreen } from "../Components/Screens/Solar/CalculadoraElectricaScreen";
+import { CalculadoraSolarScreen } from "../Components/Screens/Solar/CalculadoraSolarScreen";
 
 export const AppRouter = () => {
   return (
@@ -17,6 +19,8 @@ export const AppRouter = () => {
       <Route path="/servicios/oilgas" element={<OilGasScreen />} />
       <Route path="/servicios/solar" element={<SolarScreen />} />
       <Route path="/productos" element={<ProductosScreen />} />
+      <Route path="/calculadora-electrica" element={<CalculadoraElectricaScreen />} />
+      <Route path="/calculadora-termotanque" element={<CalculadoraSolarScreen />} />
     </Routes>
   );
 };
