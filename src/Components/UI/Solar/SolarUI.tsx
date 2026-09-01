@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./Solar.module.css";
 import { Link } from "react-router-dom";
-import { CalculadoraTermotanqueUI } from "../Calculadora/CalculadoraTermotanqueUI";
-import { CalculadoraElectricaUI } from "../Calculadora/CalculadoraElectricaUI";
+
 
 const SERVICES = [
   {
