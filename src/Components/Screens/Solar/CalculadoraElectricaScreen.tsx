@@ -1,6 +1,4 @@
 import { CalculadoraElectricaUI } from "../../UI/Calculadora/CalculadoraElectricaUI";
-import FooterUI from "../../UI/Footer/FooterUI";
-import NavbarUI from "../../UI/Header/NavbarUI";
 
 
 
