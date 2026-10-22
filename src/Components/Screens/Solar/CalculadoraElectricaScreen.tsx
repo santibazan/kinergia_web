@@ -7,9 +7,9 @@ import NavbarUI from "../../UI/Header/NavbarUI";
 export const CalculadoraElectricaScreen = () => {
   return (
     <>
-      <NavbarUI />
+      {/* <NavbarUI /> */}
       <CalculadoraElectricaUI/>
-      <FooterUI />
+      {/* <FooterUI /> */}
     </>
   );
 };
